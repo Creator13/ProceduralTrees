@@ -27,7 +27,7 @@ public class CylinderBehaviour : MonoBehaviour {
     private void Generate() {
         var stopwatch = Stopwatch.StartNew();
 
-        cylinder = MeshGenerator.CreateCylinder(vertexCount, radius, height, Quaternion.Euler(rotation));
+        cylinder = BasicShapes.CreateCylinder(vertexCount, radius, height, Quaternion.Euler(rotation));
         GetComponent<MeshFilter>().sharedMesh = cylinder;
 
         stopwatch.Stop();
