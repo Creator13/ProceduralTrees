@@ -26,11 +26,11 @@ namespace MeshTools {
 
         public static TreeArmature Armature { get; private set; }
 
-        public static Mesh CreateTree(int vertCount, float radius, float height, int subdivisions, float variance) {
+        public static Mesh CreateTree(int vertCount, float radius, float height, int subdivisions, float variance, int branchCount) {
             var meshGen = new MeshGenerator();
 
             var armature = CreateArmature(subdivisions, height, variance);
-            var branches = CreateBranches(2, armature, 3);
+            var branches = CreateBranches(branchCount, armature);
             armature.branches = branches;
             Armature = armature;
 
@@ -112,7 +112,7 @@ namespace MeshTools {
             };
         }
 
-        private static List<BranchArmature> CreateBranches(int count, TreeArmature armature, int segmentCountBase) {
+        private static List<BranchArmature> CreateBranches(int count, TreeArmature armature) {
             var branches = new List<BranchArmature>();
 
             var trunkSize = armature.trunkVertices.Count;

@@ -13,6 +13,7 @@ public class TreeBehaviour : MonoBehaviour {
     [SerializeField] private float radius = .5f;
     [SerializeField] private int subdivisions = 6;
     [SerializeField] private float variance = .2f;
+    [SerializeField] private int branches = 2;
     [SerializeField] private int seed;
 
     private Mesh cylinder;
