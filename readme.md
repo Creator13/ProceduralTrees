@@ -14,18 +14,14 @@ Link to [**project documentation**](Procesverslag.pdf)
 First cylinder mesh
 
 <img src="https://i.imgur.com/9I5dZur.png" height="350">
+<img src="https://i.imgur.com/0alfBYt.png" height="350">
 
-First armature
+First armatures
 
 <img src="https://i.imgur.com/kDTrnmI.png" height="350">
 <img src="https://i.imgur.com/SrEjFOU.png" height="350">
 
 Armature heatmaps to test random features
-
-<img src="https://i.imgur.com/9I5dZur.png" height="350">
-<img src="https://i.imgur.com/0alfBYt.png" height="350">
-
-First armatures
 
 <img src="https://i.imgur.com/NtRBvxY.png" height="350">
 
