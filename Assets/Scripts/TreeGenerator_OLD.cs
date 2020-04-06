@@ -7,7 +7,7 @@ using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
 
 namespace TreeGenerator {
-    public class TreeGenerator : MonoBehaviour {
+    public class TreeGenerator_OLD : MonoBehaviour {
         [SerializeField, Range(0, 1)] private float min, max = 1;
         [SerializeField] private float scale = 1;
         [SerializeField] private float distanceFromCenter = 1;

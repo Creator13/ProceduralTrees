@@ -3,7 +3,19 @@
 
 Link to [**project documentation**](Procesverslag.pdf)
 
-### Snapshots:
+## How to use:
+
+Download the project and open in Unity (>2019.3.7f1). Open the scene called "TreeScene" and press enter play mode. A tree will appear in the scene, spawned in the object called Tree_root. 
+
+To generate a new tree, press G. 
+
+To change the settings, go to the inspector for Tree_root and change the values.
+
+In the scene view, the armature can be seen on the object called "Armature".
+
+Debug info about the mesh appears in the console after generating a new tree.
+
+## Snapshots (scroll for more):
 
 <img src="https://i.imgur.com/T5m6r4F.png" height="350">
 <img src="https://i.imgur.com/lUVfFmG.png" height="350">

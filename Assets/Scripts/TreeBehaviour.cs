@@ -34,7 +34,7 @@ public class TreeBehaviour : MonoBehaviour {
 
         var stopwatch = Stopwatch.StartNew();
 
-        cylinder = TreeMeshGenerator.CreateTree(vertexCount, radius, height, subdivisions, variance);
+        cylinder = TreeMeshGenerator.CreateTree(vertexCount, radius, height, subdivisions, variance, branches);
         GetComponent<MeshFilter>().sharedMesh = cylinder;
 
         stopwatch.Stop();
