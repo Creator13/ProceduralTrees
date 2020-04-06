@@ -1,13 +1,14 @@
 ﻿using System;
+using MeshTools;
 using UnityEditor;
 using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter))]
 [ExecuteInEditMode]
 public class NormalVisualiser : MonoBehaviour {
-    [SerializeField] private bool showMeshInfoOnSelect = true;
-    [SerializeField] private bool showGizmos = true;
-    [SerializeField] private bool drawLines = false;
+    public bool showMeshInfoOnSelect = true;
+    public bool showGizmos = true;
+    public bool drawLines = false;
     
     private void OnEnable() {
         Selection.selectionChanged += PrintMeshInfo;
@@ -26,7 +27,7 @@ public class NormalVisualiser : MonoBehaviour {
         
         if (Selection.activeGameObject == gameObject) {
             var mesh = GetComponent<MeshFilter>().sharedMesh;
-            Debug.Log($"Mesh info: {mesh.vertexCount} vertices - {mesh.triangles.Length} tris");
+            MeshUtils.PrintMeshInfo(mesh);
         }
     }
 

@@ -6,16 +6,6 @@ namespace MeshTools {
         private readonly List<Vector3> vertices = new List<Vector3>();
         private readonly List<int> triangles = new List<int>();
 
-        private readonly Vector3 origin;
-
-        public MeshGenerator() {
-            origin = new Vector3(0, 0, 0);
-        }
-
-        public MeshGenerator(Vector3 origin) {
-            this.origin = origin;
-        }
-
         public Mesh GetMesh(string name = "") {
             var mesh = new Mesh {
                 name = name, 
@@ -24,12 +14,6 @@ namespace MeshTools {
             };
 
             return mesh;
-        }
-
-        public void RotateVertices(Quaternion q) {
-            for (var i = 0; i < vertices.Count; i++) {
-                vertices[i] = q * (vertices[i] - origin) + origin;
-            }
         }
 
         public void TriangulateCircle(List<Vector3> circle, FaceDirection dir) {
@@ -101,6 +85,16 @@ namespace MeshTools {
                 triangles.Add(v3);
                 triangles.Add(v2);
             }
+        }
+
+        public void AddTriangleNew(Vector3 v1, Vector3 v2, Vector3 v3) {
+            var vertexIndex = vertices.Count;
+            vertices.Add(v1);
+            vertices.Add(v2);
+            vertices.Add(v3);
+            triangles.Add(vertexIndex);
+            triangles.Add(vertexIndex + 1);
+            triangles.Add(vertexIndex + 2);
         }
 
         public void AddQuad(int v1, int v2, int v3, int v4, FaceDirection dir = FaceDirection.CW) {

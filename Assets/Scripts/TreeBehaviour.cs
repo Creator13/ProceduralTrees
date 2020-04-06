@@ -30,7 +30,7 @@ public class TreeBehaviour : MonoBehaviour {
     private void Generate() {
         var random = Random.Range(int.MinValue, int.MaxValue);
         Random.InitState(seed == 0 ? random : seed);
-        
+
         var stopwatch = Stopwatch.StartNew();
 
         cylinder = TreeMeshGenerator.CreateTree(vertexCount, radius, height, subdivisions, variance);
